@@ -24,10 +24,10 @@ from util.FileUtils import readFile
 max_len = 120
 word_vec_dim = 50
 position_vec_dim = 10
-epoch_size = 5
+epoch_size = 30
 input_file = '../../data/final_corpus.txt'
 word_vec_file = '/home/wang/PythonProjects/data/zhwiki_2017_03.sg_50d.word2vec'
-output_file = '/home/wang/PythonProjects/data/data/LSTM.model'
+output_file = '/home/wang/PythonProjects/data/LSTM.model'
 
 lines = readFile(input_file)
 rep = RepresentationLayer(wordvec_file=word_vec_file, frequency=500000, max_sent_len=max_len)
@@ -68,7 +68,8 @@ model.compile(loss='categorical_crossentropy', optimizer=opt)
 train_instances = [line.strip() for line in lines]
 label_array_t, word_array_t, dis_e1_array_t, dis_e2_array_t = rep.represent_instances(train_instances)
 
-model.fit([word_array_t, dis_e1_array_t, dis_e2_array_t],label_array_t, batch_size=128, epochs=20)
+model.fit([word_array_t, dis_e1_array_t, dis_e2_array_t],label_array_t, batch_size=128, epochs=epoch_size)
 model.save(output_file)
 label_array_ans = model.predict([word_array_t, dis_e1_array_t, dis_e2_array_t], batch_size=128)           
+print(label_array_ans)
 print("训练完成！！")
