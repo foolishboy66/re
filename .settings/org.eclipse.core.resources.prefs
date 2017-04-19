@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//data/corpus.txt=UTF-8
+encoding//data/corpusSegDone.txt=UTF-8
+encoding//data/corpusWordVec.emb=UTF-8
+encoding//src/dictionary/GetDict.py=utf-8
+encoding//src/model/KerasModel.py=utf-8
+encoding//src/prehandle/GetData.py=utf-8
+encoding//src/prehandle/Prehandle.py=utf-8
+encoding//src/present/RepresentationLayer.py=utf-8
+encoding//src/seg/GetCropus.py=utf-8
+encoding//src/seg/GetFinalCorpus.py=utf-8
+encoding//src/seg/Segment.py=utf-8
+encoding//src/util/Constant.py=utf-8
+encoding//src/util/FileUtils.py=utf-8
+encoding//src/vec/GetWordVec.py=utf-8
