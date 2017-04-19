@@ -33,7 +33,7 @@ def replaceWithE(content):
 input_file = '../../data/GAD1-1000.txt'
 input_file_eng = '../../data/GAD1-1000_lab.txt'
 output_file = '../../data/newCropusSegment.txt'
-dict_file = '../../data/dictionary.txt'
+dict_file = '../../data/dic.txt'
 
 lines = readFile(input_file)
 lab_lines = readFile(input_file_eng)

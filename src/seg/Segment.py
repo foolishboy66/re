@@ -17,7 +17,7 @@ from util.FileUtils import readFile
 import jieba
 input_file = '../../data/corpus.txt'
 output_file = '../../data/corpusSegDone.txt'
-dict_file = '../../data/dictionary.txt'
+dict_file = '../../data/dic.txt'
 
 jieba.load_userdict(dict_file)
 lines = readFile(input_file)

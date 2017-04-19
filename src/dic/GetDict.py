@@ -10,13 +10,13 @@ Create on 2017年4月11日 下午3:43:23
 @copyright:  2017 wang. All rights reserved.
 
 '''
-from prehandle.GetData import getContent
+from pre.GetData import getContent
 from util.Constant import E1_B, E1_E, E2_B, E2_E, GENE, DISEASE
 from util.FileUtils import readFile, getPos, writeFile
 
 
 input_file = '../../data/new_GAD1-1000.txt'
-output_file = '../../data/dictionary.txt'
+output_file = '../../data/dic.txt'
 
 # def getPos(line):
 #     begin_index1 = find_content_begin_index(line, ONE)
