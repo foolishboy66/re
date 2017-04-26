@@ -5,6 +5,7 @@ encoding//data/corpusWordVec.emb=UTF-8
 encoding//src/dic/GetDict.py=utf-8
 encoding//src/eval/EvalModel.py=utf-8
 encoding//src/kmodel/KerasModel.py=utf-8
+encoding//src/kmodel/KerasModel2.py=utf-8
 encoding//src/pre/GetData.py=utf-8
 encoding//src/pre/Prehandle.py=utf-8
 encoding//src/rep/RepresentationLayer.py=utf-8

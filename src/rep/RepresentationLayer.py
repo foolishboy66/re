@@ -17,7 +17,7 @@ from util.Constant import DISEASE, CHEMICAL, GENE, TRUE, FALSE, PADDING, SPARSE,
 
 class RepresentationLayer(object):
     
-    def __init__(self, wordvec_file=None, frequency=500000, scale=1
+    def __init__(self, wordvec_file=None, frequency=200000, scale=1
                  , max_sent_len=120, output_size=2):
         '''
         vec_size        :    the dimension size of word vector

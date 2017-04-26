@@ -70,12 +70,13 @@ def eval_mulclass(ans_matrix, res_matrix, real=True):
     print
     return F1
 
-lines = readFile(input_file)
-train_instances = [line.strip() for line in lines]
-rep = RepresentationLayer(wordvec_file=word_vec_file, frequency=500000, max_sent_len=max_len)
-label_array_t, word_array_t, dis_e1_array_t, dis_e2_array_t = rep.represent_instances(train_instances)
-
-model = load_model(model_path)
-label_array_ans = model.predict([word_array_t, dis_e1_array_t, dis_e2_array_t], batch_size=128)           
-
-eval_mulclass(label_array_t, label_array_ans)
+if __name__ == '__main__':
+    lines = readFile(input_file)
+    train_instances = [line.strip() for line in lines]
+    rep = RepresentationLayer(wordvec_file=word_vec_file, frequency=500000, max_sent_len=max_len)
+    label_array_t, word_array_t, dis_e1_array_t, dis_e2_array_t = rep.represent_instances(train_instances)
+    
+    model = load_model(model_path)
+    label_array_ans = model.predict([word_array_t, dis_e1_array_t, dis_e2_array_t], batch_size=128)           
+    
+    eval_mulclass(label_array_t, label_array_ans)
